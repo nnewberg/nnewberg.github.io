@@ -1,0 +1,29 @@
+.banner {
+     display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-top:10%;
+  	width: 450px;
+}
+
+.textbody{
+	margin-left: 10%;
+  	margin-right: 10%;
+  	margin-top:75px;
+  	font-size: 18px;
+  	color: #ecd9ac;
+  	font-family: "Courier New", Courier, monospace;
+
+
+}
+
+.center
+{
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.icon
+{
+  	width: 50px;
+}
