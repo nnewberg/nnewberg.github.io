@@ -5,18 +5,33 @@
 
 <body bgcolor="#396a4e">
 	<div>
-	    <img class="banner" src="banner.png" alt="centered image" />
+	    <img class="banner" src="TikiMirageBanner_small.png" alt="centered image" />
 	</div>
 	<center class="textbody"> 
 Many years ago and many leagues under the sea was a place where shipwrecked pirates, Polynesian princes, mermaids and all who had heard its legendary tales sought serene escape from the harsh waters, good company and exotic intoxicating potions. A spout of untamed tides sent this place farther into the depths than any sane soul could reach.  Lost for countless years, a brave sea explorer once stumbled upon this gem and brought it ashore. Dazzled by its seemingly magical ability to melt away even the slightest of stresses of its inhabitants, the explorer knew he must treat his discovery with great care. Although cloaked under the guise of the ordinary and everyday, few have been lucky enough to be granted access. Today, you have been chosen to join us in Luau.	</center>
 	<div>
-	<center class="textbody"> 
-	<img class="icon" src="leisure.png" />
-	<b class="center">Towards Better Leisure Tomorrow.</b>
-
-	<img class="icon" src="leisure.png" />
-	</center>
 	</div>
+
+	<div id="eventbrite-widget-container-63546137207"></div>
+
+	<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+	<script type="text/javascript">
+	    var exampleCallback = function() {
+	        console.log('Order complete!');
+	    };
+
+	    window.EBWidgets.createWidget({
+	        // Required
+	        widgetType: 'checkout',
+	        eventId: '63546137207',
+	        iframeContainerId: 'eventbrite-widget-container-63546137207',
+
+	        // Optional
+	        iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+	        onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+	    });
+	</script>
 </body>
 <iframe src="tiki.mp3" loop="true" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe> 

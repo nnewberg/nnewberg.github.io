@@ -1,0 +1,67 @@
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+img{
+	width: 30%;
+	display: block;
+	margin: 0 auto;
+}
+
+h2{
+	color:rgb(56,74,128);
+}
+
+#container {
+  position: relative;
+}
+
+#container canvas, #overlay {
+  position: absolute;
+}
+
+.center {
+  margin: auto;
+  margin-top:25%;
+  padding: 10px;
+}
+
+form{
+  height: 100px;
+}
+#myButton
+{
+  width:50%;
+  margin:0 auto;
+  display:inherit;
+}
+
+#buttonDiv
+{
+  margin: auto;
+}
+
+#container
+{
+  height: 400px;
+  position: relative;
+  width: 400px;
+}
+#myCanvas
+{
+  height: 100%;
+  width: 100%;
+  top:50%;
+}
+#controls
+{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+

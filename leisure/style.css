@@ -9,7 +9,7 @@
 .textbody{
 	margin-left: 10%;
   	margin-right: 10%;
-  	margin-top:75px;
+  	margin-top:60px;
   	font-size: 18px;
   	color: #ecd9ac;
   	font-family: "Courier New", Courier, monospace;
@@ -21,9 +21,10 @@
 {
 	margin-top: auto;
 	margin-bottom: auto;
+  position: relative;;
 }
 
 .icon
 {
-  	width: 50px;
+  	width: 25px;
 }
