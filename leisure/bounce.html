@@ -14,10 +14,9 @@
     <img id = "pasta" src="leisure.png">
   </div>
   <body bgcolor="#396a4e">
-      <!--<canvas id="myCanvas"></canvas>-->
+      <canvas id="myCanvas"></canvas>
       <div class="center">
         <input type="image" id="myButton" src="Button.png" onClick="passWord()">
-      <!--<input type="button" align="center" id="myButton" value="Enter Protected Area" onClick="passWord()">-->
       </div>
 
     <script>
@@ -27,13 +26,10 @@
           window.setTimeout(callback, 1000 / 60);
         };
       })();
-
       function initBalls(canvas) {
         balls = [];
-
         var pizzaImg=document.getElementById("pizza");
         var pastaImg=document.getElementById("pasta");
-
         for(var x = 0; x < canvas.width; x+= 100)
         {
           for(var y = 0; y < canvas.height; y+= 100)
@@ -42,40 +38,37 @@
             var vx = Math.random();
             var vy = Math.random();
             var v_len = Math.sqrt((vx * vx) + (vy * vy));
-            ball.vx = vx/v_len * 0;
-            ball.vy = vy/v_len * 0;
+            ball.vx = vx/v_len * 2;
+            ball.vy = vy/v_len * 2;
             balls.push(ball);
           }
         }
-
         // for(var i = 0; i<30; i++){
-        //   //var randWidth = Math.floor(Math.random() * canvas.width);
-        //   //var randHeight = Math.floor(Math.random() * canvas.height);
-        //   var randWidth = (canvas.width/30)*i;
-        //   var randHeight = (canvas.height/30)*i;
+        //   var randWidth = Math.floor(Math.random() * canvas.width);
+        //   var randHeight = Math.floor(Math.random() * canvas.height);
+        //   // var randWidth = (canvas.width/30)*i;
+        //   // var randHeight = (canvas.height/30)*i;
         //   var ball = new Ball(randWidth, randHeight, 0, 0, pizza);
         //   var vx = Math.random();
         //   var vy = Math.random();
         //   var v_len = Math.sqrt((vx * vx) + (vy * vy));
-        //   ball.vx = vx/v_len * 0;
-        //   ball.vy = vy/v_len * 0;
+        //   ball.vx = vx/v_len * 4;
+        //   ball.vy = vy/v_len * 4;
         //   balls.push(ball);
         // }
-
-        for(var i = 0; i<10; i++){
-          var randWidth = Math.floor(Math.random() * canvas.width);
-          var randHeight = Math.floor(Math.random() * canvas.height);
-          var ball = new Ball(randWidth, randHeight, 0, 0, pasta);
-          ball.scale = 75;
-          var vx = Math.random();
-          var vy = Math.random();
-          var v_len = Math.sqrt((vx * vx) + (vy * vy));
-          ball.vx = vx/v_len * 4;
-          ball.vy = vy/v_len * 4;
-          balls.push(ball);
-        }
+        // for(var i = 0; i<10; i++){
+        //   var randWidth = Math.floor(Math.random() * canvas.width);
+        //   var randHeight = Math.floor(Math.random() * canvas.height);
+        //   var ball = new Ball(randWidth, randHeight, 0, 0, pasta);
+        //   ball.scale = 75;
+        //   var vx = Math.random();
+        //   var vy = Math.random();
+        //   var v_len = Math.sqrt((vx * vx) + (vy * vy));
+        //   ball.vx = vx/v_len * 4;
+        //   ball.vy = vy/v_len * 4;
+        //   balls.push(ball);
+        // }
        
-
         return balls;
       }
       function getMousePos(canvas, evt) {
@@ -88,7 +81,6 @@
           left += obj.offsetLeft;
           obj = obj.offsetParent;
         }
-
         // return relative mouse position
         var mouseX = evt.clientX - left + window.pageXOffset;
         var mouseY = evt.clientY - top + window.pageYOffset;
@@ -97,37 +89,28 @@
           y: mouseY
         };
       }
-
       function magnitude(vx, vy){
         return Math.sqrt((vx*vx) + (vy*vy));
       }
-
       function updateBalls(canvas, balls, timeDiff, mousePos) {
         var context = canvas.getContext('2d');
         var collisionDamper = 0;
         var floorFriction = 0.0005 * timeDiff;
         var mouseForceMultiplier = 1 * timeDiff;
-
         for(var n = 0; n < balls.length; n++) {
           var ball = balls[n];
           // set ball position based on velocity
           ball.y += ball.vy;
           ball.x += ball.vx;
-
           // mouse forces
           var mouseX = mousePos.x;
           var mouseY = mousePos.y;
-
           var distX = ball.x - mouseX;
           var distY = ball.y - mouseY;
-
           var radius = Math.sqrt(Math.pow(distX, 2) + Math.pow(distY, 2));
-
           var totalDist = Math.abs(distX) + Math.abs(distY);
-
           var forceX = (Math.abs(distX) / totalDist) * (1 / radius) * mouseForceMultiplier;
           var forceY = (Math.abs(distY) / totalDist) * (1 / radius) * mouseForceMultiplier;
-
           if(distX > 0 ) {// mouse is left of ball
             ball.vx += forceX;
           }
@@ -140,15 +123,12 @@
           else {
             ball.vy -= forceY;
           }
-
           //limit velocity
           var mag = magnitude(ball.vx, ball.vy);
-          if(mag > 0.5){
-            ball.vx = ball.vx*0.5/mag;
-            ball.vy = ball.vy*0.5/mag;
+          if(mag > 1){
+            ball.vx = ball.vx*1/mag;
+            ball.vy = ball.vy*1/mag;
           }
-
-
           // floor friction
           // if(ball.vx > 0) {
           //   ball.vx -= floorFriction;
@@ -162,28 +142,24 @@
           // else if(ball.vy < 0) {
           //   ball.vy += floorFriction;
           // }
-
           // floor condition
           if(ball.y > (canvas.height - ball.radius)) {
             ball.y = canvas.height - ball.radius - 2;
             ball.vy *= -1;
             ball.vy *= (1 - collisionDamper);
           }
-
           // ceiling condition
           if(ball.y < (ball.radius)) {
             ball.y = ball.radius + 2;
             ball.vy *= -1;
             ball.vy *= (1 - collisionDamper);
           }
-
           // right wall condition
           if(ball.x > (canvas.width - ball.radius)) {
             ball.x = canvas.width - ball.radius - 2;
             ball.vx *= -1;
             ball.vx *= (1 - collisionDamper);
           }
-
           // left wall condition
           if(ball.x < (ball.radius)) {
             ball.x = ball.radius + 2;
@@ -208,18 +184,14 @@
         var context = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-
-
         // update
         var date = new Date();
         var time = date.getTime();
         var timeDiff = time - lastTime;
         updateBalls(canvas, balls, timeDiff, mousePos);
         lastTime = time;
-
         // clear
         context.clearRect(0, 0, canvas.width, canvas.height);
-
         // render
         for(var n = 0; n < balls.length; n++) {
           var ball = balls[n];
@@ -235,7 +207,6 @@
           animate(canvas, balls, lastTime, mousePos);
         });
       }
-
       var canvas = document.getElementById('myCanvas');
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;      
@@ -243,8 +214,6 @@
       //var text = drawText(canvas);
       var date = new Date();
       var time = date.getTime();
-
-
       /*
        * set mouse position really far away
        * so the mouse forces are nearly obsolete
@@ -253,19 +222,16 @@
         x: 9999,
         y: 9999
       };
-
       canvas.addEventListener('mousemove', function(evt) {
         var pos = getMousePos(canvas, evt);
         mousePos.x = pos.x;
         mousePos.y = pos.y;
       });
-
       canvas.addEventListener('mouseout', function(evt) {
         mousePos.x = 9999;
         mousePos.y = 9999;
       });
       animate(canvas, balls, time, mousePos);
-
       function passWord() {
       var testV = 1;
       var pass1 = prompt('Please Enter Your Password',' ');
@@ -285,7 +251,6 @@
       history.go(-1);
       return " ";
       } 
-
     </script>
   </body>
-</html>
+</html> 
