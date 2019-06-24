@@ -1,11 +1,12 @@
 .banner {
      display: block;
-     padding-left: 100px;
-     padding-right: 100px;
+     padding-left: 10%;
+     padding-right: 10%;
   	margin-left: auto;
   	margin-right: auto;
   	margin-top:10%;
-  	max-width: 450px;
+  	width:75%;
+    max-width: 500px;
 }
 
 .textbody{
