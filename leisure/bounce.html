@@ -102,27 +102,27 @@
           // set ball position based on velocity
           ball.y += ball.vy;
           ball.x += ball.vx;
-          // mouse forces
-          var mouseX = mousePos.x;
-          var mouseY = mousePos.y;
-          var distX = ball.x - mouseX;
-          var distY = ball.y - mouseY;
-          var radius = Math.sqrt(Math.pow(distX, 2) + Math.pow(distY, 2));
-          var totalDist = Math.abs(distX) + Math.abs(distY);
-          var forceX = (Math.abs(distX) / totalDist) * (1 / radius) * mouseForceMultiplier;
-          var forceY = (Math.abs(distY) / totalDist) * (1 / radius) * mouseForceMultiplier;
-          if(distX > 0 ) {// mouse is left of ball
-            ball.vx += forceX;
-          }
-          else {
-            ball.vx -= forceX;
-          }
-          if(distY > 0) {// mouse is on top of ball
-            ball.vy += forceY;
-          }
-          else {
-            ball.vy -= forceY;
-          }
+          // // mouse forces
+          // var mouseX = mousePos.x;
+          // var mouseY = mousePos.y;
+          // var distX = ball.x - mouseX;
+          // var distY = ball.y - mouseY;
+          // var radius = Math.sqrt(Math.pow(distX, 2) + Math.pow(distY, 2));
+          // var totalDist = Math.abs(distX) + Math.abs(distY);
+          // var forceX = (Math.abs(distX) / totalDist) * (1 / radius) * mouseForceMultiplier;
+          // var forceY = (Math.abs(distY) / totalDist) * (1 / radius) * mouseForceMultiplier;
+          // if(distX > 0 ) {// mouse is left of ball
+          //   ball.vx += forceX;
+          // }
+          // else {
+          //   ball.vx -= forceX;
+          // }
+          // if(distY > 0) {// mouse is on top of ball
+          //   ball.vy += forceY;
+          // }
+          // else {
+          //   ball.vy -= forceY;
+          // }
           //limit velocity
           var mag = magnitude(ball.vx, ball.vy);
           if(mag > 1){

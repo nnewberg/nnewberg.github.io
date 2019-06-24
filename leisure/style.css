@@ -1,9 +1,11 @@
 .banner {
      display: block;
+     padding-left: 100px;
+     padding-right: 100px;
   	margin-left: auto;
   	margin-right: auto;
   	margin-top:10%;
-  	width: 450px;
+  	max-width: 450px;
 }
 
 .textbody{
