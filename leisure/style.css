@@ -21,7 +21,8 @@
 }
 .checkout
 {
-  width: 50%;
+  min-width: 400px;
+  max-width: 400px;
   margin: auto;
   padding-top:20%;
 }

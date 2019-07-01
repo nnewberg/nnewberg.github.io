@@ -24,10 +24,16 @@ h2{
   position: absolute;
 }
 
-.center {
-  margin: auto;
-  margin-top:25%;
-  padding: 10px;
+.paradise-button-wrapper {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 0;       
+  width: 100%;
+  height: 100%;
+  
+  z-index: 1;
 }
 
 form{

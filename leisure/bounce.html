@@ -15,8 +15,10 @@
   </div>
   <body bgcolor="#396a4e">
       <canvas id="myCanvas"></canvas>
-      <div class="center">
+      <div class="paradise-button-wrapper"> 
+      <div class="top: 0;">
         <input type="image" id="myButton" src="Button.png" onClick="passWord()">
+      </div>
       </div>
 
     <script>
@@ -42,33 +44,7 @@
             ball.vy = vy/v_len * 2;
             balls.push(ball);
           }
-        }
-        // for(var i = 0; i<30; i++){
-        //   var randWidth = Math.floor(Math.random() * canvas.width);
-        //   var randHeight = Math.floor(Math.random() * canvas.height);
-        //   // var randWidth = (canvas.width/30)*i;
-        //   // var randHeight = (canvas.height/30)*i;
-        //   var ball = new Ball(randWidth, randHeight, 0, 0, pizza);
-        //   var vx = Math.random();
-        //   var vy = Math.random();
-        //   var v_len = Math.sqrt((vx * vx) + (vy * vy));
-        //   ball.vx = vx/v_len * 4;
-        //   ball.vy = vy/v_len * 4;
-        //   balls.push(ball);
-        // }
-        // for(var i = 0; i<10; i++){
-        //   var randWidth = Math.floor(Math.random() * canvas.width);
-        //   var randHeight = Math.floor(Math.random() * canvas.height);
-        //   var ball = new Ball(randWidth, randHeight, 0, 0, pasta);
-        //   ball.scale = 75;
-        //   var vx = Math.random();
-        //   var vy = Math.random();
-        //   var v_len = Math.sqrt((vx * vx) + (vy * vy));
-        //   ball.vx = vx/v_len * 4;
-        //   ball.vy = vy/v_len * 4;
-        //   balls.push(ball);
-        // }
-       
+        }       
         return balls;
       }
       function getMousePos(canvas, evt) {
