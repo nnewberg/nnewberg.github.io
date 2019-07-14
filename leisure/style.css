@@ -4,16 +4,24 @@
      padding-right: 5%;*/
   	margin-left: auto;
   	margin-right: auto;
-  	margin-top:10%;
+  	margin-top: 60px;
   	width:90%;
     max-width: 500px;
   }
 
+.reserveButton{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .textbody{
 	margin-left: 15%;
   	margin-right: 15%;
-  	margin-top:10vw;
-    font-size:calc(10px + 1.0vw);
+  	margin-top: 50px;
+    font-size: 18px;
   	color: #ecd9ac;
   	font-family: "Courier New", Courier, monospace;
 
