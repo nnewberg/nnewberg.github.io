@@ -1,54 +1,48 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .banner {
-    display: block;
-  	margin-left: auto;
-  	margin-right: auto;
-  	margin-top: 60px;
-  	width:90%;
-    max-width: 500px;
-  }
+  max-width: 500px;
+  padding-top: 60px;
+}
 
-.divider{
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.textbody {
+  max-width: 600px;
+  padding-top: 50px;
+
+  text-align: center;
+  font-size: 16px;
+  color: #ecd9ac;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.divider {
   display: block;
-   margin-top: 50px;
+  max-width: 800px;
+  padding-top: 50px;
 }
-.reserveButton{
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.textbody{
-	  margin-left: 15%;
-  	margin-right: 15%;
-  	margin-top: 50px;
-    font-size: 16px;
-  	color: #ecd9ac;
-  	font-family: "Courier New", Courier, monospace;
-    max-width: 800px;
 
-
+.reserveButton {
+  width: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.checkout
-{
-  min-width: 400px;
-  max-width: 400px;
+
+.checkout {
+  width: 400px;
   margin: auto;
   padding-top:20%;
 }
 
-.center
-{
-	margin-top: auto;
-	margin-bottom: auto;
+.center {
+  margin-top: auto;
+  margin-bottom: auto;
   position: relative;;
 }
 
-.icon
-{
-  	width: 25px;
+.icon {
+    width: 25px;
 }
