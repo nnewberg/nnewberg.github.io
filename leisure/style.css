@@ -1,28 +1,47 @@
+body {
+  width: 100%;
+}
+
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.banner-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .banner {
   max-width: 500px;
+  width: 90%;
   padding-top: 60px;
 }
 
 .textbody {
-  max-width: 600px;
+  max-width: 800px;
+  width: 90%;
   padding-top: 50px;
 
   text-align: center;
   font-size: 16px;
+
   color: #ecd9ac;
   font-family: "Courier New", Courier, monospace;
+}
+
+@media only screen and (max-width: 600px) {
+  .textbody {
+    font-size: 12px;
+  } 
 }
 
 .divider {
   display: block;
   max-width: 800px;
   padding-top: 50px;
+  width: 90%;
 }
 
 .reserveButton {
