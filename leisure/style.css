@@ -11,12 +11,14 @@ body {
 .banner-wrapper {
   display: flex;
   justify-content: center;
+  padding-top: 60px;
 }
 
 .banner {
   max-width: 500px;
   width: 90%;
-  padding-top: 60px;
+  max-height: 212px;
+  height: 38.1375%
 }
 
 .textbody {
@@ -33,7 +35,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .textbody {
-    font-size: 12px;
+    font-size: 14px;
   } 
 }
 
