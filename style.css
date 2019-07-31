@@ -1,0 +1,69 @@
+body {
+  width: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.banner {
+  max-width: 500px;
+  width: 90%;
+  max-height: 212px;
+  height: 38.1375%
+}
+
+.textbody {
+  max-width: 800px;
+  width: 90%;
+  padding-top: 50px;
+
+  text-align: center;
+  font-size: 16px;
+
+  color: #ecd9ac;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media only screen and (max-width: 600px) {
+  .textbody {
+    font-size: 14px;
+  } 
+}
+
+.divider {
+  display: block;
+  max-width: 800px;
+  padding-top: 50px;
+  width: 90%;
+}
+
+.reserveButton {
+  width: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.checkout {
+  width: 400px;
+  margin: auto;
+  padding-top:20%;
+}
+
+.center {
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;;
+}
+
+.icon {
+    width: 25px;
+}
