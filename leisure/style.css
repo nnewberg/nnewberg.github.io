@@ -18,7 +18,40 @@ body {
   max-width: 500px;
   width: 90%;
   max-height: 212px;
-  height: 38.1375%
+  height: 38.1375%;
+}
+
+.ballad-container {
+  max-width: 900px;
+  width: 90%;
+  padding-top: 50px;
+  /* background-color: aqua; */
+  font-size: 16px;
+  line-height: 1.75;
+  color: #ecd9ac;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.ballad-column-container {
+  display: flex;
+  flex-direction: row;
+  padding-left: 80px;
+}
+
+.ballad-title {
+  /* max-width: 850px; */
+  /* width: 90%; */
+  flex-direction: column;
+  /* background-color: red; */
+  font-size: 22px;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.ballad-column {
+  /* background-color: chartreuse; */
+  /* width: 100%; */
+  margin: auto;
 }
 
 .textbody {
@@ -30,13 +63,13 @@ body {
   font-size: 16px;
 
   color: #ecd9ac;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 @media only screen and (max-width: 600px) {
   .textbody {
     font-size: 14px;
-  } 
+  }
 }
 
 .divider {
@@ -55,15 +88,15 @@ body {
 .checkout {
   width: 400px;
   margin: auto;
-  padding-top:20%;
+  padding-top: 20%;
 }
 
 .center {
   margin-top: auto;
   margin-bottom: auto;
-  position: relative;;
+  position: relative;
 }
 
 .icon {
-    width: 25px;
+  width: 25px;
 }
