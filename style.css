@@ -15,18 +15,19 @@ body {
 }
 
 .banner {
-  max-width: 500px;
+  max-width: 350px;
   width: 90%;
-  max-height: 212px;
-  height: 38.1375%;
+  /* max-height: 212px;
+  height: 38.1375%; */
 }
 
 .ballad-container {
   max-width: 900px;
   width: 90%;
   padding-top: 50px;
+  padding-bottom: 50px;
   /* background-color: aqua; */
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.75;
   color: #ecd9ac;
   font-family: 'Courier New', Courier, monospace;
@@ -43,7 +44,7 @@ body {
   /* width: 90%; */
   flex-direction: column;
   /* background-color: red; */
-  font-size: 22px;
+  font-size: 16px;
   text-align: center;
   padding-bottom: 16px;
 }
