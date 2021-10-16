@@ -5,8 +5,8 @@
   <script>    !function(t,o,c,k){if(!t.tock){var e=t.tock=function(){e.callMethod?    e.callMethod.apply(e,arguments):e.queue.push(arguments)};t._tock||(t._tock=e),    e.push=e,e.loaded=!0,e.version='1.0',e.queue=[];var f=o.createElement(c);f.async=!0,    f.src=k;var g=o.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g)}}(    window,document,'script','https://www.exploretock.com/tock.js');    tock('init', 'tikimirage');    </script>
 </head>
 
-<div class="reserve-banner-m">
-  <img class="reserve-img" src="reserve-m.png"  alt="centered image" />
+<div class="reserve-banner-m" onclick="scrollToBottom();">
+  <img class="reserve-img" src="join-waitlist-m.png"  alt="centered image" />
 </div>
 
 <body bgcolor="#396a4e">
@@ -134,7 +134,7 @@
       </div>
     </div>
 
-    <iframe src="https://futureleisurefoundation.com/joinwaitlist" style="border:none" id="iframe-waitlist"></iframe>
+    <iframe src="https://futureleisurefoundation.com/joinwaitlist" scroll="no" style="border:none" id="iframe-waitlist"></iframe>
 
     </div>
     <!-- <img class="divider" src="waves.png"> -->
@@ -144,5 +144,16 @@
 
 <iframe src="tiki.mp3" loop="true" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe>
-<!-- <center><audio controls loop src="tiki.mp3"></audio></center> -->
 
+<script>
+  let scrollButton = document.getElementsByClassName("reserve-banner-m");
+  let waitlist = document.getElementById("iframe-waitlist");
+  console.log("Waitlist: " + waitlist);
+  console.log("Scroll: " + scrollButton);
+
+  function scrollToBottom() {
+    console.log("Scroll");
+    waitlist.scrollIntoView();
+  }
+
+</script>
